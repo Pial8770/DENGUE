@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+         body{
+             background-image : url("C:\Users\User\PycharmProjects\DENGUE\templates\background.jpg");
+             background-repeat: no-repeat;
+         }
+
+          .register{
+              background-color : #2d85b0;
+              width : 500px;
+              margin : 0px 0px 0px 430px;
+              color: white;
+              font-size: 18px;
+              padding : 30px;
+              border-radius:20px;
+         }
+
+         label{
+              color : white;
+              font-family : sans-serif;
+              font-size : 18px;
+              font-style : italic;
+
+         }
+         input{
+             width:300px;
+             border: none;
+             border-radius : 3px;
+             outline : 0;
+             padding : 7px;
+         }
+
+         #sub{
+             width : 200px;
+             padding: 7px;
+             font-size: 16px;
+             font-family: sans-serif;
+             font-style : italic;
+             font-weight: 600;
+             border: none;
+             border-radius: 3px;
+             outline: 0;
+             text-align : center;
+         }
+         .predict{
+             border : 1px;
+             font-size: 16px;
+             font-family : sans-serif;
+             font-style: italic;
+             font-weight : 600;
+             text-align : center;
+         }
+         .center{
+             margin: 0;
+             position: absolute;
+             top: 80%;
+             left: 45%;
+
+         }
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <div class="register">
+
+<form action="/predict" method = "POST">
+    <div>
+        <label>Sex  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</label>
+
+        <input id="nam" name="sex" type="text" placeholder="Enter 0(Male) / 1(Female)">
+    </div>
+
+    <br>
+
+    <div>
+        <label>Age  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</label>
+
+        <input id="nae" name="age" type="text" placeholder="Enter your age">
+    </div>
+
+    <br>
+    <div>
+        <label>Temperature  :</label>
+
+        <input id="nme" name="temp" type="text" placeholder="Enter temperature(C)">
+    </div>
+
+    <br>
+    <div>
+        <label>Headache  &nbsp&nbsp&nbsp&nbsp:</label>
+
+        <input id="ame" name="headache" type="text" placeholder="Enter 0(Yes) / 1(No)">
+    </div>
+
+    <br>
+    <div>
+        <label>Vomiting  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</label>
+
+        <input id="me" name="vomiting" type="text" placeholder="Enter 0(Yes) / 1(No)">
+    </div>
+
+    <br>
+    <div>
+        <label>Joint Pain  &nbsp&nbsp&nbsp&nbsp&nbsp:</label>
+
+        <input id="e" name="joint" type="text" placeholder="Enter 0(Yes) / 1(No)">
+    </div>
+
+    <br>
+    <div>
+        <label>Skin Rash  &nbsp&nbsp&nbsp&nbsp:</label>
+
+        <input id="ae" name="skin" type="text" placeholder="Enter 0(Yes) / 1(No)">
+    </div>
+
+    <br>
+    <div>
+        <label>Bleeding  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</label>
+
+        <input id="ne" name="bleeding" type="text" placeholder="Enter 0(Yes) / 1(No)">
+    </div>
+
+    <br>
+    <div>
+        <label>Back pain  &nbsp&nbsp&nbsp&nbsp:</label>
+
+        <input id="na" name="back_pain" type="text" placeholder="Enter 0(Yes) / 1(No)">
+    </div>
+
+    <br>
+    <div>
+        <label>Sore throat  &nbsp&nbsp:</label>
+
+        <input id="" name="sore_throat" type="text" placeholder="Enter 0(Yes) / 1(No)">
+    </div>
+
+    <br>
+    <div class="center">
+    <button type="submit" id="sub">Predict</button>
+    </div>
+    <br><br>
+     <div class="predict">
+        {{pred}}
+     </div>
+    </form>
+     </div>
+
+        <br>
+    </div>
+</body>
+
+</html>
